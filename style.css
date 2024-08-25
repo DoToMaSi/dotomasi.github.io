@@ -19,9 +19,22 @@ body {
     margin: 0px;
 }
 
-h1, h2, h3 {
-    /* Define fonte para os Títulos e Sub-Títulos (H1, H2, H3) */
+/* Removemos o margin embutido do p (causa espaçamentos indesejados) */
+p {
+    /* margin: 0px; */
+}
+
+/* Define fonte para os Títulos e Sub-Títulos (H1, H2, H3, H4) e removemos suas margens para deixar o espaçamento mais controlado */
+h1, h2, h3, h4 {
     font-family: 'Rubik', 'Impact', Geneva, Verdana, sans-serif;
+    margin: 0px;
+}
+
+/* Todos os <article> serão um flex/column com um gap de 16 para dar um espaçamento automatico */
+article {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
 }
 
 #toolbar {
@@ -98,6 +111,9 @@ h1, h2, h3 {
 
 /* Re-estilizando as listas para ter um melhor espaçamento */
 .page-wrapper ul {
+    padding-top: 16px;
+    padding-inline-start: 21px;
+    margin: 0px;
     display: flex;
     flex-direction: column;
     gap: 16px;
@@ -108,16 +124,74 @@ h1, h2, h3 {
     text-align: justify;
 }
 
+/* Classe para estilizar o embedded do Spotify */
+.music-container {
+    padding: 0px 16px;
+}
+
+@media (max-width: 860px) {
+    .music-container {
+        width: 100%;
+    }
+}
+
+/* Rows e Cols para exibição de textos e imagens de forma responsiva */
+
 .ds-row {
     display: flex;
+    align-items: center;
+    flex-wrap: wrap;
     width: 100%;
 }
 
 .ds-row .ds-col {
-    flex-basis: 50%;
+    width: 100%;
 }
 
-#angular {
+.ds-row .ds-col.image {
+    display: flex;
+    justify-content: center;
+}
+
+.ds-row.reverse {
+    flex-direction: row-reverse;
+}
+
+.ds-row .ds-col.image img {
+    border-radius: 24px;
+    object-fit: contain;
+    width: 100%;
+}
+
+.ds-row .ds-col.image .image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 16px;
+}
+
+@media (min-width: 860px) {
+    .ds-row .ds-col {
+        flex-basis: 0;
+        flex-grow: 1;
+        max-width: 100%;
+    }
+
+    .ds-row .ds-col.image {
+        max-width: 400px;
+    }
+}
+
+/* Uma classe flex para ajustar as imagens junto com o texto*/
+.ds-flex-image {
+    display: flex;
+    gap: 8px;
+    padding: 16px 0px;
+}
+
+.ds-flex-image img {
+    border-radius: 16px;
+    object-fit: cover;
     width: 150px;
 }
 
@@ -128,7 +202,7 @@ h1, h2, h3 {
     background-color: var(--dark);
 }
 
-iframe {
+.video-container iframe {
     position: absolute;
     opacity: 0.5;
     top: 50%;
@@ -149,4 +223,11 @@ iframe {
     .video-container iframe {
         width: 177.78vh;
     }
+}
+
+/* Rodapé */
+
+.ds-footer {
+    background: var(--secondary);
+    padding: 64px;
 }
