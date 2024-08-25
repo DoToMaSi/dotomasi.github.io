@@ -1,3 +1,152 @@
+:root {
+    /* Cria uma Paleta de Cores baseado em vars */
+    --primary: #b5e0ff;
+    --secondary: #4a6d7c;
+    --warn: #ffc470;
+    --danger: #e5625e;
+    --light: #fafafa;
+    --dark: #000501;
+}
+
 * {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    /* Define fonte Global para todos os elementos */
+    font-family: 'Open Sans', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+body {
+    /* Define uma cor de fundo mais agradável e remove o margin padrão do body */
+    background-color: var(--light);
+    margin: 0px;
+}
+
+h1, h2, h3 {
+    /* Define fonte para os Títulos e Sub-Títulos (H1, H2, H3) */
+    font-family: 'Rubik', 'Impact', Geneva, Verdana, sans-serif;
+}
+
+#toolbar {
+    position: sticky;
+    z-index: 10;
+}
+
+
+/* Componente de Toolbar */
+.ds-toolbar {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+
+    padding: 0px 24px;
+    min-height: 60px;
+    background-color: var(--secondary);
+    color: var(--light);
+}
+
+/* Componente Sub-Header de Navegação */
+.ds-navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    padding: 0px 24px;
+    min-height: 60px;
+    background-color: var(--primary);
+    color: var(--dark);
+}
+
+/* Classe de um "envelopador" do texto principal e vídeo (organiza os elementos certos) */
+.starter-wrapper {
+    overflow: hidden;
+    display: block;
+    position: relative;
+}
+
+
+/* Classe para a apresentação do Texto Principal */
+.ds-main-content {
+    position: absolute;
+    top: 0px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 100%;
+    color: var(--light);
+    text-shadow: 0px 0px 20px #000000;
+    box-shadow: inset 0px 0px 365px 0px #000000;
+}
+
+/* Estilização específica do H1 dentro da classe ds-main-content */
+.ds-main-content h1 {
+    font-size: 64px;
+    margin: 0px;
+}
+
+/* Espaçamento interno para melhorar visibilidade da página em mobile */
+.ds-main-content article {
+    padding: 32px
+}
+
+/* Classe de um "envelopador" do resto da página */
+.page-wrapper {
+    padding: 16px 32px;
+}
+
+/* Re-estilizando as listas para ter um melhor espaçamento */
+.page-wrapper ul {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* Faz a exibição do texto dentro da classe page-wrapper ficar justificado */
+.page-wrapper p {
+    text-align: justify;
+}
+
+.ds-row {
+    display: flex;
+    width: 100%;
+}
+
+.ds-row .ds-col {
+    flex-basis: 50%;
+}
+
+#angular {
+    width: 150px;
+}
+
+/* Classes para exibir o vídeo do YouTube de fundo */
+.video-container {
+    width: 100vw;
+    height: 640px;
+    background-color: var(--dark);
+}
+
+iframe {
+    position: absolute;
+    opacity: 0.5;
+    top: 50%;
+    left: 50%;
+    width: 100vw;
+    height: 76vh;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}
+
+@media (min-aspect-ratio: 16/9) {
+    .video-container iframe {
+        height: 56.25vw;
+    }
+}
+      
+@media (max-aspect-ratio: 16/9) {
+    .video-container iframe {
+        width: 177.78vh;
+    }
 }

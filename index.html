@@ -12,14 +12,106 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
   </head>
 
   <body>
-    <header class="ds-toolbar">
+    <header id="toolbar">
+        <section class="ds-toolbar">
+            <h2>Portifólio - Douglas Tomacheski</h2>  
+        </section>
 
+        <nav class="ds-navbar">
+            <a href="#sobre">Sobre</a>
+            <a href="#carreira">Carreira</a>
+            <a href="#contato">Contato</a>
+        </nav>
     </header>
-    <main>
-        <h1>Welcome to My Website</h1>  
+
+
+    <main id="content">
+        <section class="starter-wrapper">
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/AXxXrhA03t4?si=OeFmPbPdtJyGojWL&start=14&autoplay=1&mute=1&controls=0&playsinline=1&playlist=AXxXrhA03t4&loop=1&end=168"></iframe>
+            </div>
+    
+            <div class="ds-main-content">
+                <article>
+                    <h1>Douglas Tomacheski</h1>
+                    <p>Desenvolvedor Front-end Sênior, Pai de Dois Filhos, Gamer e Piloto de Simulador</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="page-wrapper">
+            <h1 id="sobre">Sobre Mim</h1>
+            <hr/>
+            <article>
+                <p>Curitibano, 27 anos, Desenvolvedor Front-End, graduando em Análise e Desenvolvimento de Sistemas pela UNINTER, 
+                    apaixonado por games e automobilismo desde muito cedo - algo que ajudou a desenvolver muitas das minhas outras paixões e proeficiências como adaptabilidade, tomada de decisões rápidas, concentração e pressão por períodos e com informações limitadas, criatividade e inglês avançado.</p>
+
+                <h3>Hobbies Favoritos</h3>
+                <ul>
+                    <li>
+                        <b>Games:</b> Desde cedo lembro de jogar video-games para passar meu tempo como filho único por vários anos. Games me trouxeram uma experiência audio/visual interativa que filmes não oferecem: mundos/histórias para se explorar e situações para se simular ao seu ritmo.
+                    </li>
+
+                    <li>
+                        <b>Música:</b> Nunca fui músico (nunca tive aptidão para guitarra) mas eu aprecio música de tal forma na qual escuto albuns inteiros, procuro entender o que faz a aquela música em particular ser especial, presto atenção nos arranjos, instrumentos, mixagem, letras, contra-pontos e como tudo 
+                        se relaciona em uma experiência sônica inigualável.
+                    </li> 
+
+                    <li>
+                        <b>Automobilismo e Carros:</b> Graças aos Games, também desde muito por carros e corridas (interessantemente, duas coisas diferentes) que carrego até hoje com bastante amor, seja pelos roncos de esportivos ou pela competitividade em autódromos.
+                    </li>                    
+                </ul>
+            </article>
+
+            <hr/>
+            <h1 id="carreira">Carreira / Formação</h1>
+            <hr/>
+            <article>
+                <p>
+                    Desenvolvedor Front-end especializado em <a href="https://angular.dev/" target="_blank">Angular</a> e <a href="https://ionicframework.com/" target="_blank">Ionic</a>, tendo atuado com a tecnologia desde 2017 e em diversos projetos de diversos portes, com culturas e metodologias diferentes ajudando a expandir meu conhecimento de tudo que envolve TI hoje em dia, como o Scrum, DevOps e etc.
+                </p>
+
+                <div class="ds-row">
+                    <div class="ds-col-text">
+                        <h3>HARD SKILLS</h3>
+                        <ul>
+                            <li>Desenvolvimento Front-end com Angular.</li>
+                            <li>Desenvolvimento de Aplicações Mobile Híbridas com Ionic.</li>
+                            <li>Desenvolvimento de Layouts Front-end com HTML + CSS e frameworks CSS como Bootstrap e Material.</li>
+                        </ul>
+                    </div>
+
+                    <div class="ds-col">
+                        <img id="angular" src="./assets/angular.png" alt="Angular">
+                    </div>
+                </div>
+
+                    
+                <h3>SOFT SKILLS</h3>
+                <ul>
+                    <li>Comunicação com equipes e stakeholders devido a minha primeira experiência profissional como vendedor e a quantidade de diferentes projetos que participei durante minha carreira em TI.</li>
+                    <li>Conhecimento em layouts responsivos pelo tempo de experiência que tive com desenvolvimento de aplicações mobile, na qual exigem muito cuidado com o UX para que os aplicativos tenham uma excelente usabilidade.</li>
+                    <li>Conhecimento de Metodologias Agile e Scrum devido aos diferentes projetos que participei que utilizou, de varias maneiras, os frameworks mencionados e seus ritos.</li>
+                </ul>
+                
+                <h3>Highlights de Carreira</h3>
+                <ul>
+                    <li>Atuação na arquitetura dos aplicativos mobile da Furukawa em 2019</li>
+                    <li>Atuação no aplicativo Unimed Curitiba em 2020</li>
+                    <li>Atuação como Lider Técnico e Desenvolvedor do aplicativo ValiData da start-up Superintel em 2021</li>
+                    <li>Atuação na criação dos módulos front-end "Manutenção de Frotas" e "Financeiro" da aplicação Gestran - Gestão de Transportes em 2022</li>
+                    <li>Atuação na construção e manutenção da biblioteca de componentes Lib-Design da Bradesco Seguros em 2023</li>
+                </ul>
+            </article>
+        </section>
     </main>
+
+    <footer id="contato">
+        <p>Contato</p>
+    </footer>
   </body>
 </html>
