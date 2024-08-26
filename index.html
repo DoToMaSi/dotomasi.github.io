@@ -94,7 +94,7 @@
                 </section>
 
                 <section id="musicas">
-                    <h4>Recomendações de Música dos meus Artistas Favoritos</h4>
+                    <h4 class="padding-vertical">Recomendações de Música dos meus Artistas Favoritos</h4>
                     <div class="ds-row">
                         <div class="ds-col">
                             <div class="music-container">
@@ -235,7 +235,52 @@
     </main>
 
     <footer id="contato" class="ds-footer">
-        <p>Contato</p>
+        <div class="ds-row">
+            <div class="ds-col">
+                <section class="left-side">
+                    <h2>Contato</h2>
+        
+                    <div class="contact-list">
+                        <p>E-mail: <a href="mailto:dotomasi@outlook.com">dotomasi@outlook</a></p>
+                        <p>Telefone: <a href="#">(41) 3333-3333</a></p>
+                        <p>Endereço: <a href="#">Rua Lorem Ipsum, 37 - Centro, São Paulo - SP</a></p>
+                    </div>
+                </section>
+            </div>
+
+            <div class="ds-col">
+                <section class="right-side">
+                    <h2>Envie uma Mensagem</h2>
+        
+                    <fieldset>
+                        <label>Nome</label>
+                        <input name="nome" type="text" placeholder="Insira seu nome" maxlength="50"/>
+                    </fieldset>
+        
+                    <fieldset>
+                        <label>E-mail</label>
+                        <input name="email" type="email" placeholder="exemplo@email.com"  maxlength="50"/>
+                    </fieldset>
+        
+                    <fieldset>
+                        <label>Telefone</label>
+                        <input name="email" type="tel" placeholder="(00) 00000-0000"  maxlength="15"/>
+                    </fieldset>
+        
+                    <fieldset>
+                        <label>Mensagem</label>
+                        <textarea name="mensagem" placeholder="Envie sua mensagem aqui..." rows="5" maxlength="255">
+                        </textarea>
+                    </fieldset>
+
+                    <hr/>
+        
+                    <button class="ds-button" type="submit">
+                        Enviar
+                    </button>
+                </section>
+            </div>
+        </div>
     </footer>
   </body>
 </html>

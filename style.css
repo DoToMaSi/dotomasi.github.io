@@ -3,6 +3,7 @@
     --primary: #b5e0ff;
     --secondary: #4a6d7c;
     --warn: #ffc470;
+    --warn-dark: #836438;
     --danger: #e5625e;
     --light: #fafafa;
     --dark: #000501;
@@ -19,9 +20,22 @@ body {
     margin: 0px;
 }
 
+a {
+    font-weight: bold;
+    color: var(--secondary);
+}
+
+a:visited {
+    color: var(--dark);
+}
+
+a:hover {
+    color: var(--warn-dark);
+}
+
 /* Removemos o margin embutido do p (causa espaçamentos indesejados) */
 p {
-    /* margin: 0px; */
+    margin: 0px;
 }
 
 /* Define fonte para os Títulos e Sub-Títulos (H1, H2, H3, H4) e removemos suas margens para deixar o espaçamento mais controlado */
@@ -30,11 +44,34 @@ h1, h2, h3, h4 {
     margin: 0px;
 }
 
+/* Classes Utilitárias para adicionar margin quando necessário */
+.margin-vertical {
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+.margin-horizontal {
+    margin-left: 16px;
+    margin-right: 16px;
+}
+
+/* Classes Utilitárias para adicionar padding quando necessário */
+.padding-vertical {
+    padding-top: 16px;
+    padding-bottom: 16px;
+}
+
+.padding-horizontal {
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
 /* Todos os <article> serão um flex/column com um gap de 16 para dar um espaçamento automatico */
 article {
     display: flex;
     flex-direction: column;
     gap: 24px;
+    padding: 20px 0px;
 }
 
 #toolbar {
@@ -225,9 +262,91 @@ article {
     }
 }
 
-/* Rodapé */
+/* Classes do Rodapé */
 
 .ds-footer {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
     background: var(--secondary);
+    color: var(--light);
     padding: 64px;
+}
+
+.ds-footer a {
+    color: var(--light);
+}
+
+.ds-footer .contact-list {
+    padding: 16px 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.ds-footer .left-side {
+    
+}
+
+.ds-footer .right-side {
+
+}
+
+.divider {
+    width: 1px;
+    background-color: var(--light);
+    height: auto;
+}
+
+/* Classes para formulário */ 
+
+fieldset {
+    display: flex;
+    flex-direction: column;
+    margin: 0px;
+    padding: 8px 0px;
+    min-inline-size: none;
+    border-width: 0px;
+    border-style: none;
+    border-color: transparent;
+    border-image: none;
+}
+
+fieldset label {
+    font-size: 12px;
+}
+
+fieldset input {
+    border-radius: 10px;
+    border: 0px;
+    border-color: none;
+    padding: 10px;
+}
+
+fieldset textarea {
+    border-radius: 10px;
+    border: 0px;
+    border-color: none;
+    padding: 10px;
+}
+
+.ds-button {
+    text-align: center;
+    border-radius: 10px;
+    background: var(--primary);
+    color: var(--dark);
+    border: 0px;
+    padding: 8px 24px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 0.1s ease;
+}
+
+.ds-button:active {
+    background-color: var(--secondary);
+    color: var(--light);
+}
+
+.ds-button:hover {
+    transform: scale(1.1);
 }
