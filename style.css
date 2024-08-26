@@ -3,7 +3,6 @@
     --primary: #b5e0ff;
     --secondary: #4a6d7c;
     --warn: #ffc470;
-    --warn-dark: #836438;
     --danger: #e5625e;
     --light: #fafafa;
     --dark: #000501;
@@ -30,7 +29,7 @@ a:visited {
 }
 
 a:hover {
-    color: var(--warn-dark);
+    color: var(--dark);
 }
 
 /* Removemos o margin embutido do p (causa espaçamentos indesejados) */
@@ -74,9 +73,17 @@ article {
     padding: 20px 0px;
 }
 
+/* Fixa o toolbar no topo para facilitar navegação */
 #toolbar {
-    position: sticky;
+    position: fixed;
+    top: 0px;
+    width: 100%;
     z-index: 10;
+}
+
+/* Padding compensando o tamanho do toolbar (que está fixo no topo) */
+#content {
+    margin-top: 120px;
 }
 
 
