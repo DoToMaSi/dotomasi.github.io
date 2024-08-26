@@ -284,14 +284,6 @@ article {
     gap: 12px;
 }
 
-.ds-footer .left-side {
-    
-}
-
-.ds-footer .right-side {
-
-}
-
 .divider {
     width: 1px;
     background-color: var(--light);
